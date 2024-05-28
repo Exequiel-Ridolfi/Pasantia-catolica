@@ -3,9 +3,10 @@
 if(isset( $_POST['subir_informacion'])){
     $email = $_POST['email'];
     $dni = $_POST['dni'];
-    $nombre_completo =$_POST['nombre_completo'];
+    $nombre_completo =strtolower($_POST['nombre_completo']);
     $matricula =$_POST['matricula'];
     $comentarios = $_POST['comentarios'];
+
     $query = "INSERT  INTO prestadores(email,dni,nombre_completo,matricula,comentarios) 
               VALUES ('$email','$dni','$nombre_completo','$matricula','$comentarios')"; 
     $result = mysqli_query($conn, $query);
@@ -14,10 +15,14 @@ if(isset( $_POST['subir_informacion'])){
         die($error_message);
    }else{
     ?>
-    <script>alert("Registro Guardado");</script>
-    <script> window.history.go(-1);</script>
+    <script>Swal.fire({
+      title: "Formulario enviado!",
+       text: "Gracias por enivar, para salir darle al boton OK ",
+       icon: "success"
+    });
+    </script>
     <?php 
+}?>
+  <script>history.replaceState(null,null,location.pathname) </script>
+<?php
 }
-}
-
-?>
