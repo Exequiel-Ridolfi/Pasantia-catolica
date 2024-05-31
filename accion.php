@@ -3,7 +3,7 @@
 if(isset( $_POST['subir_informacion'])){
     $email = $_POST['email'];
     $dni = $_POST['dni'];
-    $nombre_completo =strtolower($_POST['nombre_completo']);
+    $nombre_completo =$_POST['nombre_completo'];
     $matricula =$_POST['matricula'];
     $comentarios = $_POST['comentarios'];
 
@@ -17,7 +17,7 @@ if(isset( $_POST['subir_informacion'])){
     ?>
     <script>Swal.fire({
       title: "Formulario enviado!",
-       text: "Gracias por enivar, para salir darle al boton OK ",
+       text: "Gracias por enivar, para salir presione click al boton OK ",
        icon: "success"
     });
     </script>
