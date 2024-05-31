@@ -4,54 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body>
-  <div class="header">
-    <img src="img/logo.png" alt="logo" class="img">
-    <div class="divisor"></div>
-    <h3 class="title1">Ministerio de <br><b>Salud</b></h3>
-    <h3 class="title1"> Obra Social <br> Provicia</h3>
-  </div>
-  <div class="container-titulo">
-    <h2 id="titulo">Prueba de Formulario-Cobro de plus</h2>
-  </div>
-  <form method="post">
+<body style ="background-color: white">
 
-    <div class="container">
-      <label id="email"> Email del afiliado</label>
-      <input type="email" id="email" name="email" placeholder="Ingrese su Email"  value=""  required>
-    </div>
+  <header class ="container-fluid" style="background-image: url('img/nav.jpg'); height: 200px;  color: white; display: flex;
+  align-items: center; justify-content: flex-start; margin-bottom: 50px; " >
+   <h2 style= "color: white;">Formulario de prueba</h2>
+  </header>
+
+ 
+  <form method="post" class ="container-fluid"  style ="background-color:#e5dcdd; width: 500px; height: 700px; border-radius: 8px; padding: 14px; margin-bottom: 10px;">
+    <h2 style="margin-top: 20px;">Complete este formulario</h2>
+
+      <label id="email" class="form-label"> Email del afiliado</label>
+      <input type="email"  class="form-control" style="margin-bottom: 30px; padding-left: 20px;" id="email" name="email" placeholder="Ingrese su Email"  value=""  required>
 
 
-    <div class="container">
-      <label id="Dni"> Dni del afiliado</label>
-      <input type="number" id="Dni" name="dni" placeholder="Ingrese su DNI" value=""  required>
-    </div>
+      <label id="Dni" class="form-label" > Dni del afiliado</label>
+      <input type="number" class="form-control" style="margin-bottom: 30px; padding-left: 20px;" id="Dni" name="dni" placeholder="Ingrese su DNI" value=""  required>
 
-    <div class="container">
-      <label id="nombre_completo"> Apellido y Nombre del prestador</label>
-      <input type="text" id="nombre_completo" name="nombre_completo"
-        placeholder="Ingrese  el Apellido y Nombre del prestador" value=""  required pattern="[a-zA-Z, ]+">
-    </div>
+      <label id="nombre_completo" class="form-label" > Apellido y Nombre del prestador</label>
+      <input type="text"  class="form-control" style="margin-bottom: 30px; padding-left: 20px;" id="nombre_completo" name="nombre_completo"
+        placeholder="Ingrese  el Apellido y Nombre del prestador" value=""  required pattern="[a-zA-Z, ,. , ,]+">
 
-    <div class="container">
-      <label id="Matricula">Matricula de Prestador</label>
-      <input type="number" id="Matricula" name="matricula" placeholder="Ingrese la Matricula de Prestador"required value="">
-    </div>
+      <label id="Matricula" class="form-label" >Matricula de Prestador</label>
+      <input type="number" class="form-control"  style="margin-bottom: 30px; padding-left: 20px;" id="Matricula" name="matricula" placeholder="Ingrese la Matricula de Prestador"required value="">
 
-    <div class="container">
-      <label id="Comentarios"> Comentarios o sugerencias</label>
-      <input type="text" id="Comentarios" name="comentarios" placeholder="Ingrese el Comentario" value="" >
-    </div>
-    <div class="contenBtn">
-      <button class="button" type="submit" name="subir_informacion" id="subir_informacion">Enviar</button>
-      <button class="btnBorrar" type="reset" name="btnBorrar" >Borrar formulario</button>
-    </div>
+      <label id="Comentarios" class="form-label" > Comentarios o sugerencias</label>
+      <input type="text" class="form-control" style="margin-bottom: 70px; padding-left: 20px;" id="Comentarios" name="comentarios" placeholder="Ingrese el Comentario" value="" >
+      <button class="button" style ="margin-right:270px; background-color:#f98109; padding: 8px; border: none;border-radius: 5px; color: white; font-size: 16px; cursor: pointer;  transition: background-color 0.3s;
+    margin-top: 5px;" type="submit" name="subir_informacion" id="subir_informacion">Enviar</button>
+      
+      <button class="btnBorrar" style ="background-color: transparent; color: #d25401; outline: none; border: none; cursor: pointer;" type="reset" name="btnBorrar" >Borrar formulario</button>
+
   </form>
 
+
+ <div  class ="container-fluid" style = "background-color: #1d262d; padding:10px "  >
+  <footer >
+   <img src="img/logo_sj_gobierno_dark.png" alt="logo_dark" style = "width: 120px;" >
+  </footer>
+ </div>
 
 </body>
 <?php include("accion.php")?>
