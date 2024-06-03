@@ -11,7 +11,7 @@
 
 <body style ="background-color: white">
 
-  <header class ="container-fluid" style="background-image: url('img/nav.jpg'); height: 200px;  color: white; display: flex;
+  <header class ="container-fluid" style="background-image: url('img/nav.jpg');   height: 200px;  color: white; display: flex;
   align-items: center; justify-content: flex-start; margin-bottom: 50px; " >
    <h2 style= "color: white;">Formulario de prueba</h2>
   </header>

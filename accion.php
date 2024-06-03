@@ -17,7 +17,7 @@ if(isset( $_POST['subir_informacion'])){
     ?>
     <script>Swal.fire({
       title: "Formulario enviado!",
-       text: "Gracias por enivar, para salir presione click al boton OK ",
+       text: "Gracias por enviar, para salir presione click al boton OK ",
        icon: "success"
     });
     </script>
